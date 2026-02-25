@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Ahmed Morsi | Backend Engineer</title>
+    <meta name="description" content="Mohamed Ahmed Morsi - Backend Engineer specialized in .NET APIs, scalable architecture, and performance optimization.">
+    
+    <!-- Fonts: Inter for a clean, engineering aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Icons (Lucide or similar lightweight SVGs will be used inline or via CDN) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">
+                <span class="logo-accent">M</span>Morsi<span class="logo-dot">.</span>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#open-source">Open Source</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i data-lucide="sun" class="icon-sun"></i>
+                    <i data-lucide="moon" class="icon-moon"></i>
+                </button>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero section">
+            <div class="container hero-container">
+                <div class="hero-content reveal">
+                    <div class="hero-badge">Available for Work</div>
+                    <h1 class="hero-title">
+                        <span class="greeting">Hi, I'm</span><br>
+                        Mohamed Ahmed Morsi
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        Backend Engineer <span class="accent-text">|</span> .NET API Specialist
+                    </h2>
+                    <p class="hero-description">
+                        I design scalable systems, build secure RESTful APIs, and optimize database performance. Committed to Clean Architecture and delivering maintainable, production-ready backend solutions.
+                    </p>
+                    
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">
+                            <i data-lucide="folder-git-2"></i> View Projects
+                        </a>
+                        <a href="#" class="btn btn-secondary">
+                            <i data-lucide="download"></i> Download CV
+                        </a>
+                        <div class="social-links">
+                            <a href="https://github.com/morsy777" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub">
+                                <i data-lucide="github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/eng-mohamed-morsi" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                                <i data-lucide="linkedin"></i>
+                            </a>
+                            <a href="#contact" class="social-icon" aria-label="Contact">
+                                <i data-lucide="mail"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual reveal">
+                    <div class="profile-container">
+                        <div class="profile-glow"></div>
+                        <img src="Photo.jpg" alt="Mohamed Ahmed Morsi" class="profile-img">
+                        <div class="tech-badge badge-1"><i data-lucide="database"></i></div>
+                        <div class="tech-badge badge-2"><i data-lucide="server"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Engineering Philosophy</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="about-grid reveal">
+                    <div class="about-card">
+                        <div class="about-icon"><i data-lucide="layers"></i></div>
+                        <h3>Clean Architecture</h3>
+                        <p>Structuring applications for maintainability, independent of frameworks, UI, or databases. Focusing on separation of concerns.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon"><i data-lucide="shield-check"></i></div>
+                        <h3>Secure RESTful APIs</h3>
+                        <p>Implementing robust authentication (JWT) and role-based authorization ensuring data integrity and secure endpoints.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon"><i data-lucide="database-zap"></i></div>
+                        <h3>Database Optimization</h3>
+                        <p>Expertise in EF Core, normalized schema design, and writing optimized queries to handle complex relational data.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon"><i data-lucide="activity"></i></div>
+                        <h3>Scalable Systems</h3>
+                        <p>Designing backend architectures capable of handling growth, employing design patterns and modular workflows.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="skills section bg-alt">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Technical Capabilities</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="skills-container reveal">
+                    <div class="skill-group">
+                        <h3 class="skill-category">
+                            <i data-lucide="terminal"></i> Backend
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">C#</span>
+                            <span class="skill-tag">ASP.NET Core</span>
+                            <span class="skill-tag">Web APIs</span>
+                            <span class="skill-tag">MVC</span>
+                            <span class="skill-tag">Microservices</span>
+                            <span class="skill-tag">SignalR</span>
+                            <span class="skill-tag">WF</span>
+                            <span class="skill-tag">OOP</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-group">
+                        <h3 class="skill-category">
+                            <i data-lucide="database"></i> Databases & ORM
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MS SQL Server</span>
+                            <span class="skill-tag">T-SQL</span>
+                            <span class="skill-tag">LINQ</span>
+                            <span class="skill-tag">EF Core</span>
+                            <span class="skill-tag">ADO.NET</span>
+                            <span class="skill-tag">Dapper</span>
+                            <span class="skill-tag">Redis</span>
+                            <span class="skill-tag">DB Design</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-group">
+                        <h3 class="skill-category">
+                            <i data-lucide="braces"></i> Architecture & OS
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Clean Architecture</span>
+                            <span class="skill-tag">SOLID Principles</span>
+                            <span class="skill-tag">Design Patterns</span>
+                            <span class="skill-tag">Data Structures</span>
+                            <span class="skill-tag">Algorithms</span>
+                            <span class="skill-tag">Agile</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-group">
+                        <h3 class="skill-category">
+                            <i data-lucide="git-branch"></i> Tools & DevOps
+                        </h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">GitHub Actions</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">CI/CD Pipelines</span>
+                            <span class="skill-tag">Azure</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Projects Section -->
+        <section id="projects" class="projects section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Engineering Projects</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="project-list">
+                    
+                    <!-- Project 1 -->
+                    <article class="project-card reveal">
+                        <div class="project-content">
+                            <h3 class="project-title">Click2Buy – E-Commerce API</h3>
+                            <div class="project-role">Lead Backend Engineer</div>
+                            <p class="project-desc">
+                                A highly scalable e-commerce backend providing secure transaction processing and inventory management. Designed with a modular architecture to support future microservices migration.
+                            </p>
+                            
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <i data-lucide="cpu"></i>
+                                    <div>
+                                        <strong>Architecture:</strong> Clean Architecture, Modular Design
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <i data-lucide="key"></i>
+                                    <div>
+                                        <strong>Key Features:</strong> JWT Authentication, Role-based Authorization, Complex Filtering & Pagination
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-stack">
+                                <span>ASP.NET Core</span>
+                                <span>EF Core</span>
+                                <span>SQL Server</span>
+                                <span>JWT</span>
+                            </div>
+                            
+                            <div class="project-links">
+                                <a href="https://github.com/morsy777/E-Commerce-API" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm"><i data-lucide="github"></i> Repository</a>
+                                <a href="#" class="btn btn-text btn-sm">API Docs <i data-lucide="arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card reveal">
+                        <div class="project-content">
+                            <h3 class="project-title">Language Learning Backend System</h3>
+                            <div class="project-role">Backend Developer</div>
+                            <p class="project-desc">
+                                A comprehensive backend powering a language-learning application, handling user progression, content delivery, and interactive evaluation systems.
+                            </p>
+                            
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <i data-lucide="database"></i>
+                                    <div>
+                                        <strong>Database Strategy:</strong> Highly structured relational database for hierarchical lesson data and historical tracking.
+                                    </div>
+                                </div>
+                                <div class="detail-item">
+                                    <i data-lucide="zap"></i>
+                                    <div>
+                                        <strong>Core Logic:</strong> Streak system calculation, automatic level classification, and dynamic quiz engine.
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tech-stack">
+                                <span>C#</span>
+                                <span>.NET Web APIs</span>
+                                <span>LINQ</span>
+                            </div>
+                            
+                            <div class="project-links">
+                                <a href="https://github.com/morsy777/Sooyaa.API" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm"><i data-lucide="github"></i> Repository</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 & 4 (Grid Layout for smaller projects) -->
+                    <div class="projects-grid">
+                        <article class="project-card compact reveal">
+                            <div class="project-content">
+                                <h3 class="project-title">Survey Basket API</h3>
+                                <p class="project-desc">
+                                    Backend system for managing scalable survey deployments, complex questionnaire branching, and analytical answer aggregations.
+                                </p>
+                                <ul class="impact-list">
+                                    <li>Optimized EF Core queries for heavy read/write loads</li>
+                                    <li>Strict normalized database schema</li>
+                                    <li>Efficient entity relationships handling</li>
+                                </ul>
+                                <div class="tech-stack small">
+                                    <span>EF Core</span>
+                                    <span>T-SQL</span>
+                                </div>
+                                <div class="project-links mt-auto">
+                                    <a href="https://github.com/morsy777/Survey-Basket-API" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm"><i data-lucide="github"></i> Repo</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="project-card compact reveal">
+                            <div class="project-content">
+                                <h3 class="project-title">File Management API</h3>
+                                <p class="project-desc">
+                                    Secure and performant file handling system supporting varied media types with granular access permissions.
+                                </p>
+                                <ul class="impact-list">
+                                    <li>Robust upload & storage management</li>
+                                    <li>Implementation of file streaming support</li>
+                                    <li>Metadata extraction and management logic</li>
+                                </ul>
+                                <div class="tech-stack small">
+                                    <span>File IO</span>
+                                    <span>Web APIs</span>
+                                    <span>Security</span>
+                                </div>
+                                <div class="project-links mt-auto">
+                                    <a href="https://github.com/morsy777/FileManager.API" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm"><i data-lucide="github"></i> Repo</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Open Source Section -->
+        <section id="open-source" class="open-source section bg-alt">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">Open Source Contributions</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="os-card reveal">
+                    <div class="os-header">
+                        <div class="os-icon"><i data-lucide="git-pull-request"></i></div>
+                        <div>
+                            <h3 class="os-title">AOLabs.UniversitySystem</h3>
+                            <div class="os-subtitle">Public Infrastructure Project</div>
+                        </div>
+                    </div>
+                    <div class="os-body">
+                        <p>Active contributor to a large-scale, open-source university management system. Gained significant experience in navigating and extending complex existing codebases.</p>
+                        
+                        <div class="os-metrics">
+                            <div class="metric">
+                                <span class="metric-val"><i data-lucide="git-branch"></i> Git Workflow</span>
+                                <span class="metric-label">Feature branching & rebasing</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-val"><i data-lucide="message-square"></i> Code Reviews</span>
+                                <span class="metric-label">Peer review & quality assurance</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-val"><i data-lucide="users"></i> Collaboration</span>
+                                <span class="metric-label">Cross-functional team coordination</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="os-footer">
+                        <a href="https://github.com/morsy777/aolabs-university-system" target="_blank" rel="noopener noreferrer" class="btn btn-text"><i data-lucide="external-link"></i> View Contributions</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- API Specs Preview -->
+        <section class="api-preview section hidden-mobile">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">API Documentation Standard</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="swagger-mock reveal">
+                    <div class="swagger-header">
+                        <span class="swagger-title">Click2Buy API</span> <span class="swagger-version">v1.0</span>
+                    </div>
+                    <div class="swagger-endpoint get">
+                        <div class="endpoint-method">GET</div>
+                        <div class="endpoint-path">/api/v1/Products</div>
+                        <div class="endpoint-desc">Retrieves a paginated list of products</div>
+                        <div class="endpoint-lock"><i data-lucide="unlock"></i></div>
+                    </div>
+                    <div class="swagger-endpoint post">
+                        <div class="endpoint-method">POST</div>
+                        <div class="endpoint-path">/api/v1/Orders</div>
+                        <div class="endpoint-desc">Creates a new order transaction</div>
+                        <div class="endpoint-lock"><i data-lucide="lock"></i></div>
+                    </div>
+                    <div class="swagger-endpoint delete">
+                        <div class="endpoint-method">DEL</div>
+                        <div class="endpoint-path">/api/v1/Users/{id}</div>
+                        <div class="endpoint-desc">Removes a user from the system</div>
+                        <div class="endpoint-lock"><i data-lucide="lock"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="contact-card reveal">
+                    <div class="contact-content">
+                        <h2>Let's build scalable systems.</h2>
+                        <p>I am currently available for engineering roles in Europe. If you're looking for a dedicated backend specialist to tackle complex architecture problems, let's connect.</p>
+                        
+                        <div class="contact-methods">
+                            <a href="mailto:mohmedmorsy596@gmail.com" class="contact-method">
+                                <i data-lucide="mail"></i>
+                                <span>mohmedmorsy596@gmail.com</span>
+                            </a>
+                            <a href="tel:+201065622044" class="contact-method">
+                                <i data-lucide="phone"></i>
+                                <span>+201065622044</span>
+                            </a>
+                            <span class="contact-method">
+                                <i data-lucide="map-pin"></i>
+                                <span>Mansoura, Egypt (Open to Relocation)</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="contact-action">
+                        <a href="mailto:mohmedmorsy596@gmail.com" class="btn btn-primary btn-lg">
+                            Get In Touch <i data-lucide="send"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <span class="logo-accent">M</span>Morsi<span class="logo-dot">.</span>
+                <p class="footer-tagline">Backend Engineer specializing in robust .NET solutions.</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="https://github.com/morsy777" target="_blank" rel="noopener noreferrer"><i data-lucide="github"></i> GitHub</a>
+                <a href="https://linkedin.com/in/eng-mohamed-morsi" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Mohamed Ahmed Morsi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
