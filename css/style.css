@@ -78,6 +78,12 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -88,7 +94,6 @@ body {
     color: var(--text-primary);
     line-height: 1.6;
     transition: background-color var(--transition-base), color var(--transition-base);
-    overflow-x: hidden;
 }
 
 a {
@@ -115,7 +120,7 @@ img {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
 }
 
 .section {
@@ -138,7 +143,7 @@ img {
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 5vw, 2.5rem);
     font-weight: 700;
     margin-bottom: 0.5rem;
     letter-spacing: -0.02em;
@@ -255,6 +260,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .logo {
@@ -322,6 +328,44 @@ img {
     border: none;
     color: var(--text-primary);
     cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* Mobile Menu Styles */
+.mobile-menu {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all var(--transition-base);
+    z-index: 999;
+}
+
+.mobile-menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+}
+
+.mobile-menu a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.mobile-menu a:hover, 
+.mobile-menu a:active {
+    color: var(--text-primary);
 }
 
 /* =========================================================================
@@ -353,9 +397,11 @@ img {
 
 .hero-container {
     display: flex;
+    flex-direction: column-reverse; /* Default standard mobile approach */
     align-items: center;
-    justify-content: space-between;
-    gap: 4rem;
+    justify-content: center;
+    text-align: center;
+    gap: 3rem;
 }
 
 .hero-content {
@@ -421,9 +467,15 @@ img {
 
 .hero-cta {
     display: flex;
+    flex-direction: column; /* Stack on mobile */
     align-items: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 1rem;
+    width: 100%;
+}
+
+.hero-cta .btn {
+    width: 100%; /* Full width on mobile */
+    max-width: 300px;
 }
 
 .social-links {
@@ -454,11 +506,13 @@ img {
 
 /* Profile Image */
 .hero-visual {
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    width: 100%;
+    max-width: 300px; /* Constrain on mobile */
+    margin: 0 auto;
 }
 
 .profile-container {
@@ -715,7 +769,7 @@ img {
 }
 
 .project-title {
-    font-size: 1.75rem;
+    font-size: clamp(1.4rem, 4vw, 1.75rem);
     margin-bottom: 0.5rem;
     color: var(--text-primary);
 }
@@ -848,6 +902,7 @@ img {
     align-items: center;
     justify-content: center;
     color: var(--accent-color);
+    flex-shrink: 0;
 }
 
 .os-icon i {
@@ -1000,11 +1055,12 @@ img {
     background-color: var(--bg-tertiary);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
-    padding: 4rem;
+    padding: 2.5rem 1.5rem;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    gap: 4rem;
+    text-align: center;
+    gap: 3rem;
 }
 
 .contact-content {
@@ -1027,6 +1083,7 @@ img {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
+    align-items: center;
 }
 
 .contact-method {
@@ -1059,10 +1116,11 @@ img {
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
     margin-bottom: 3rem;
-    flex-wrap: wrap;
     gap: 2rem;
 }
 
@@ -1113,62 +1171,94 @@ img {
 }
 
 /* =========================================================================
-   Responsive Breakpoints
+   Responsive Breakpoints (Min-Width / Mobile-First Enhancement)
    ========================================================================= */
 
-@media (max-width: 992px) {
-    .section { padding: 4rem 0; }
-    
+@media (min-width: 768px) {
+    /* Tablet & Desktop Layouts */
     .hero-container {
-        flex-direction: column-reverse;
-        text-align: center;
-        gap: 3rem;
+        flex-direction: row; /* Side by side on larger screens */
+        text-align: left;
+        gap: 4rem;
+        justify-content: space-between;
     }
     
     .hero-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
     }
     
     .hero-description {
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 0;
+        margin-right: 0;
     }
     
-    .hero-badge::before {
-        display: none;
+    .hero-cta {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
     }
-    .hero-badge {
-        padding-left: 1rem;
+    
+    .hero-cta .btn {
+        width: auto;
     }
     
     .social-links {
-        margin: 1.5rem auto 0;
+        margin-left: auto;
+    }
+    
+    .hero-visual {
+        max-width: none;
+        flex: 1;
     }
     
     .contact-card {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 3rem 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* In a full build, this would toggle a mobile menu */
+        flex-direction: row;
+        text-align: left;
+        padding: 4rem;
+        justify-content: space-between;
     }
     
-    .hidden-mobile {
-        display: none;
+    .contact-methods {
+        align-items: flex-start;
+    }
+    
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+    
+    .nav-links {
+        display: flex;
     }
     
     .mobile-menu-btn {
-        display: block;
+        display: none;
+    }
+
+    .project-card {
+        padding: 3rem;
     }
     
-    .project-card {
-        padding: 2rem;
+    .swagger-endpoint {
+        flex-direction: row;
+        align-items: center;
+        gap: 0;
+    }
+    
+    .endpoint-method {
+        margin-right: 1.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    /* STRICTLY Mobile Resets */
+    .nav-links {
+        display: none !important;
+    }
+    
+    .mobile-menu-btn {
+        display: block !important;
     }
     
     .swagger-endpoint {
@@ -1179,5 +1269,31 @@ img {
     
     .endpoint-method {
         margin-right: 0;
+    }
+    
+    .project-card {
+        padding: 1.5rem;
+    }
+    
+    .tech-stack span {
+        font-size: 0.75rem;
+        padding: 0.2rem 0.6rem;
+    }
+    
+    .section {
+        padding: 4rem 0;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .os-card {
+        padding: 1.5rem;
+    }
+    
+    .os-header {
+        flex-direction: column;
+        text-align: center;
     }
 }

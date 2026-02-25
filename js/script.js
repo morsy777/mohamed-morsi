@@ -90,16 +90,45 @@ document.addEventListener('DOMContentLoaded', () => {
         revealOnScroll.observe(element);
     });
 
-    // Optionally handle generic Mobile menu toggle here if extending
+    // Mobile Menu Toggle Logic
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-    
-    // Very basic mobile menu toggle (future enhancement)
-    if (mobileMenuBtn && navLinks) {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    const menuIcon = mobileMenuBtn ? mobileMenuBtn.querySelector('i') : null;
+
+    if (mobileMenuBtn && mobileMenu) {
+        // Toggle menu open/close
         mobileMenuBtn.addEventListener('click', () => {
-            // Usually, we'd toggle a specific class to handle display in CSS
-            // For now, it's hidden by CSS media queries, but this stub is ready
+            const isOpen = mobileMenu.classList.contains('open');
+            if (isOpen) {
+                closeMobileMenu();
+            } else {
+                openMobileMenu();
+            }
         });
+
+        // Close menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                closeMobileMenu();
+            });
+        });
+    }
+    
+    function openMobileMenu() {
+        mobileMenu.classList.add('open');
+        if (menuIcon) {
+            menuIcon.setAttribute('data-lucide', 'x');
+            lucide.createIcons();
+        }
+    }
+    
+    function closeMobileMenu() {
+        mobileMenu.classList.remove('open');
+        if (menuIcon) {
+            menuIcon.setAttribute('data-lucide', 'menu');
+            lucide.createIcons();
+        }
     }
 
 });
